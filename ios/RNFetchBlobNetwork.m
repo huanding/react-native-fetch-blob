@@ -169,7 +169,7 @@ NSOperationQueue *taskQueue;
     self.expectedBytes = 0;
     self.receivedBytes = 0;
     self.options = options;
-    
+
     backgroundTask = [options valueForKey:@"IOSBackgroundTask"] == nil ? NO : [[options valueForKey:@"IOSBackgroundTask"] boolValue];
     followRedirect = [options valueForKey:@"followRedirect"] == nil ? YES : [[options valueForKey:@"followRedirect"] boolValue];
     isIncrement = [options valueForKey:@"increment"] == nil ? NO : [[options valueForKey:@"increment"] boolValue];
@@ -245,9 +245,9 @@ NSOperationQueue *taskQueue;
     [task resume];
 
     // network status indicator
-    if([[options objectForKey:CONFIG_INDICATOR] boolValue] == YES)
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    __block UIApplication * app = [UIApplication sharedApplication];
+    //if([[options objectForKey:CONFIG_INDICATOR] boolValue] == YES)
+    //    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    //__block UIApplication * app = [UIApplication sharedApplication];
 
 }
 
@@ -483,7 +483,7 @@ NSOperationQueue *taskQueue;
     NSString * respStr = [NSNull null];
     NSString * rnfbRespType = @"";
 
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    //[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
     if(respInfo == nil)
     {
